@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  <a-scene>
+  <!-- <a-scene>
     <a-assets>
       <a-asset-item id="prototype" src="prototype.ply"></a-asset-item>
     </a-assets>
@@ -21,29 +21,27 @@
       <a-entity environment="preset: egypt; numDressing: 500; ground: canyon"></a-entity>
     </a-box>
     <a-entity ply-model="src: #prototype" rotation="-90 0 0"></a-entity>
-  </a-scene>
+  </a-scene> -->
 
-  <!-- version 2
+
   <a-scene>
-    <a-camera
-    position="0 1 4"
-    cursor-visible="true"
-    cursor-scale="2"
-    cursor-color="#0095DD"
-    cursor-opacity="0.5">
-    </a-camera>
+    <!-- <a-assets>
+      <a-asset-item id="prototype" src="prototype.ply"></a-asset-item>
+    </a-assets> -->
+    <a-camera position="20 1 5"></a-camera>
     <a-entity gearvr-controls></a-entity>
     <a-assets>
       <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
       <img id="skyTexture"
         src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-        <img id="me" src="http://globalriskinsights.com/wp-content/uploads/2016/01/world-map-800x500_c.jpg">
+        <img id="me" src="copy.jpg">
     </a-assets>
 
     <a-box src="#boxTexture" position="0 2 -5" rotation="1 45 45" scale="2 2 2"></a-box>
     <a-sphere src="#me" position="5 5 5" scale="2 2 2"></a-sphere>
     <a-sky src="#skyTexture"></a-sky>
-  </a-scene> -->
+    <!-- <a-entity ply-model="src: #prototype" rotation="-90 0 0"></a-entity> -->
+  </a-scene>
 
 
 
