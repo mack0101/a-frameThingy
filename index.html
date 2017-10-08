@@ -7,17 +7,21 @@
   <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
   <script src="https://rawgit.com/chenzlabs/gearvr-controls/master/dist/aframe-gearvr-controls-component.min.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
   <title>A-frame Thingy</title>
 </head>
 <body>
 
-  <!-- version 1
   <a-scene>
+    <a-assets>
+      <a-asset-item id="prototype" src="prototype.ply"></a-asset-item>
+    </a-assets>
     <a-box src="https://i.imgur.com/mYmmbrp.jpg" color="red" position="0 2 -10" rotation="0 45 45" scale="2 2 2">
       <a-sphere position="1 0 3"></a-sphere>
       <a-entity environment="preset: egypt; numDressing: 500; ground: canyon"></a-entity>
     </a-box>
-  </a-scene> -->
+    <a-entity ply-model="src: #prototype" rotation="-90 0 0"></a-entity>
+  </a-scene>
 
   <!-- version 2
   <a-scene>
@@ -41,31 +45,7 @@
     <a-sky src="#skyTexture"></a-sky>
   </a-scene> -->
 
-  <a-scene>
-  <a-assets>
-    <audio id="click-sound" src="audio/click.ogg"></audio>
-    <!-- Images. -->
-    <img id="city" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg">
-    <img id="city-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
-    <img id="cubes" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/cubes.jpg">
-    <img id="cubes-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
-    <img id="sechelt" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-    <img id="sechelt-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
-  </a-assets>
-  <!-- 360-degree image. -->
-  <a-sky id="image-360" radius="10" src="#city"></a-sky>
-  <!-- Link we will build. -->
-  <a-entity class="link"></a-entity>
-  <!-- Camera + Cursor. -->
-  <a-camera>
-    <a-cursor id="cursor">
-      <a-animation begin="click" easing="ease-in" attribute="scale"
-                   fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
-      <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale"
-                   from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
-    </a-cursor>
-  </a-camera>
-</a-scene>
+
 
 </body>
 </html>
