@@ -3,12 +3,14 @@
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js">
     </script>
+
   </head>
   <body>
     <a-scene>
       <a-assets>
         <img id="image" src="copy.jpg">
         <img id="sw" src="MF8K.jpg">
+        <img id="floor" src="floor.jpg">
         <a-asset-item id="castle1" src="castle.obj"></a-asset-item>
         <a-asset-item id="castle2" src="castle.mtl"></a-asset-item>
       </a-assets>
@@ -40,7 +42,7 @@
              repeat="indefinite">
         </a-animation>
       </a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="100" height="100" color="#7BC8A4"></a-plane>
+      <!-- <a-plane src="#floor" position="0 0 -4" rotation="-90 0 0" width="50" height="50"></a-plane> -->
       <a-sky src="#sw"></a-sky>
       <a-camera position=" 0 0 3">
         <a-cursor color="black"></a-cursor>
