@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <!-- <a-scene>
+  <a-scene>
     <a-assets>
       <a-asset-item id="prototype" src="prototype.ply"></a-asset-item>
     </a-assets>
@@ -22,7 +22,7 @@
       <a-entity environment="preset: egypt; numDressing: 500; ground: canyon"></a-entity>
     </a-box>
     <a-entity ply-model="src: #prototype" rotation="-90 0 0"></a-entity>
-  </a-scene> -->
+  </a-scene>
 
 
   <!-- <a-scene> -->
@@ -50,13 +50,14 @@
     <a-sky src="#skyTexture"></a-sky>
     <a-entity ply-model="src: #prototype" rotation="-90 0 0"></a-entity> -->
   <!-- </a-scene> -->
-  <a-scene>
+  <!-- <a-scene>
 
-    <a-entity gearvr-controls></a-entity>
-    <a-entity position="0 -2 0">
-      <a-camera>
-        <a-cursor color="black" />
-      </a-camera>
+    <a-entity id="cameraRig">
+      <a-camera />
+      <a-entity
+        teleport-controls="cameraRig: #cameraRig"
+        gearvr-controls
+       />
     </a-entity>
     <a-assets>
       <a-asset-item id="test01" src="test.obj"></a-asset-item>
@@ -69,7 +70,8 @@
     <a-obj-model src="#test01" mtl="#test02" scale="0.1 0.1 0.1"></a-obj-model>
     <a-sphere color="red" position="0 2 0"></a-sphere>
 
-  </a-scene>
+  <a-plane color="green" rotation="-90 0\ 0"></a-plane>
+  </a-scene> -->
 
 
 </body>
