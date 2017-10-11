@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>A-frame Thingy</title>
   <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
   <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
@@ -14,12 +11,16 @@
 <body>
 
   <a-scene>
+    <a-entity position="0 0 5">
+  <a-camera></a-camera>
+</a-entity>
     <a-assets>
-      <a-asset-item id="table1" src="anothertable.obj"></a-asset-item>
-      <a-asset-item id="table2" src="anothertable.mtl"></a-asset-item>
+      <a-asset-item id="table1" src="blender-test.obj"></a-asset-item>
+      <a-asset-item id="table2" src="blender-test.mtl"></a-asset-item>
     </a-assets>
-    <a-obj-model src="#table1" mtl="#table2" scale="0.09 0.09 0.09"></a-obj-model>
+    <a-obj-model src="#table1" mtl="#table2" position="0 -1 0 "></a-obj-model>
 
+  <a-plane height="100" width="100" color="grey" rotation="-90 0 0 "></a-plane>
   </a-scene>
 
 
