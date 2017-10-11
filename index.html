@@ -51,12 +51,19 @@
     <a-entity ply-model="src: #prototype" rotation="-90 0 0"></a-entity> -->
   <!-- </a-scene> -->
   <a-scene>
+
+    <a-entity gearvr-controls></a-entity>
     <a-entity position="0 -1 0">
-      <a-camera></a-camera>
+      <a-camera>
+        <a-cursor color="black" />
+      </a-camera>
     </a-entity>
     <a-assets>
       <a-asset-item id="test01" src="test.obj"></a-asset-item>
       <a-asset-item id="test02" src="test.mtl"></a-asset-item>
+
+      <a-asset-item id="gear_vr_controller01" src="gear_vr_controller.obj"></a-asset-item>
+      <a-asset-item id="gear_vr_controller02" src="gear_vr_controller.mtl"></a-asset-item>
     </a-assets>
 
     <a-obj-model src="#test01" mtl="#test02" scale="0.1 0.1 0.1"></a-obj-model>
