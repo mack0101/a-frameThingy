@@ -1,78 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>A-frame Thingy</title>
-  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-  <script src="https://rawgit.com/chenzlabs/gearvr-controls/master/dist/aframe-gearvr-controls-component.min.js"></script>
-  <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
-  <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
-</head>
-<body>
-
-  <a-scene>
-    <a-entity position="0 0 5">
-  <a-camera></a-camera>
-</a-entity>
-    <a-assets>
-      <a-asset-item id="table1" src="blender-test.obj"></a-asset-item>
-      <a-asset-item id="table2" src="blender-test.mtl"></a-asset-item>
-    </a-assets>
-
-    <a-obj-model src="#table1" mtl="#table2" position="0 -1 0 "></a-obj-model>
-
-  <a-plane height="100" width="100" color="grey" rotation="-90 0 0 "></a-plane>
-  </a-scene>
-
-
-  <!-- <a-scene> -->
-    <!-- <a-assets>
-      <a-asset-item id="prototype" src="prototype.ply"></a-asset-item>
-    </a-assets> -->
-    <!-- <a-camera position="15 1 5"></a-camera> -->
-    <!-- <a-entity id="cameraRig">
-      <a-camera />
-      <a-entity
-        teleport-controls="cameraRig: #cameraRig"
-        gearvr-controls
-       />
-    </a-entity> -->
-    <!-- <a-entity gearvr-controls></a-entity> -->
-    <!-- <a-assets>
-      <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-      <img id="skyTexture"
-        src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-        <img id="me" src="copy.jpg">
-    </a-assets> -->
-
-    <!-- <a-box src="#boxTexture" position="0 2 -5" rotation="1 45 45" scale="2 2 2"></a-box>
-    <a-sphere src="#me" position="5 5 5" scale="2 2 2"></a-sphere>
-    <a-sky src="#skyTexture"></a-sky>
-    <a-entity ply-model="src: #prototype" rotation="-90 0 0"></a-entity> -->
-  <!-- </a-scene> -->
-  <!-- <a-scene>
-
-    <a-entity id="cameraRig">
-      <a-camera />
-      <a-entity
-        teleport-controls="cameraRig: #cameraRig"
-        gearvr-controls
-       />
-    </a-entity>
-    <a-assets>
-      <a-asset-item id="test01" src="test.obj"></a-asset-item>
-      <a-asset-item id="test02" src="test.mtl"></a-asset-item>
-
-      <a-asset-item id="gear_vr_controller01" src="gear_vr_controller.obj"></a-asset-item>
-      <a-asset-item id="gear_vr_controller02" src="gear_vr_controller.mtl"></a-asset-item>
-    </a-assets>
-
-    <a-obj-model src="#test01" mtl="#test02" scale="0.1 0.1 0.1"></a-obj-model>
-    <a-sphere color="red" position="0 2 0"></a-sphere>
-
-  <a-plane color="green" rotation="-90 0\ 0"></a-plane>
-  </a-scene> -->
-
-
-</body>
-</html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html> 
