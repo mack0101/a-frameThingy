@@ -9,6 +9,7 @@
   <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
   <script src="https://rawgit.com/chenzlabs/gearvr-controls/master/dist/aframe-gearvr-controls-component.min.js"></script>
   <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+  <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
 </head>
 <body>
 
@@ -24,25 +25,41 @@
   </a-scene> -->
 
 
-  <a-scene>
+  <!-- <a-scene> -->
     <!-- <a-assets>
       <a-asset-item id="prototype" src="prototype.ply"></a-asset-item>
     </a-assets> -->
-    <a-camera position="15 1 5"></a-camera>
-    <a-entity gearvr-controls></a-entity>
-    <a-assets>
+    <!-- <a-camera position="15 1 5"></a-camera> -->
+    <!-- <a-entity id="cameraRig">
+      <a-camera />
+      <a-entity
+        teleport-controls="cameraRig: #cameraRig"
+        gearvr-controls
+       />
+    </a-entity> -->
+    <!-- <a-entity gearvr-controls></a-entity> -->
+    <!-- <a-assets>
       <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
       <img id="skyTexture"
         src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
         <img id="me" src="copy.jpg">
-    </a-assets>
+    </a-assets> -->
 
-    <a-box src="#boxTexture" position="0 2 -5" rotation="1 45 45" scale="2 2 2"></a-box>
+    <!-- <a-box src="#boxTexture" position="0 2 -5" rotation="1 45 45" scale="2 2 2"></a-box>
     <a-sphere src="#me" position="5 5 5" scale="2 2 2"></a-sphere>
     <a-sky src="#skyTexture"></a-sky>
-    <!-- <a-entity ply-model="src: #prototype" rotation="-90 0 0"></a-entity> -->
-  </a-scene>
+    <a-entity ply-model="src: #prototype" rotation="-90 0 0"></a-entity> -->
+  <!-- </a-scene> -->
+  <a-scene>
+    <a-assets>
+      <a-asset-item id="test01" src="test.obj"></a-asset-item>
+      <a-asset-item id="test02" src="test.mtl"></a-asset-item>
+    </a-assets>
 
+    <a-obj-model src="#test01" mtl="#test02" scale="0.1 0.1 0.1"></a-obj-model>
+    <a-sphere color="red" position="0 2 0"></a-sphere>
+
+  </a-scene>
 
 
 </body>
