@@ -15,6 +15,8 @@
         <img id="floor" src="floor.jpg">
         <a-asset-item id="castle1" src="object2.obj"></a-asset-item>
         <a-asset-item id="castle2" src="object2.mtl"></a-asset-item>
+        <a-asset-item id="smooth1" src="smooth.obj"></a-asset-item>
+        <a-asset-item id="smooth2" src="smooth.mtl"></a-asset-item>
       </a-assets>
 
       <a-box position="2 2 2" color="black" width="0.2" height="0.1">
@@ -22,6 +24,14 @@
       </a-box>
 
       <a-obj-model src="#castle1" mtl="#castle2" scale="3 3 3" position="0 -25 0">
+        <a-animation attribute="rotation" begin="mouseenter" end="click"
+             dur="1000"
+             to="0 360 0"
+             repeat="indefinite">
+        </a-animation>
+      </a-obj-model>
+
+      <a-obj-model src="#smooth1" mtl="#smooth2" scale="2 2 2" position="5 -10 5">
         <a-animation attribute="rotation" begin="mouseenter" end="click"
              dur="1000"
              to="0 360 0"
