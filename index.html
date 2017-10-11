@@ -1,7 +1,6 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/chenzlabs/gearvr-controls/master/dist/aframe-gearvr-controls-component.min.js"></script>
     <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js">
     </script>
   </head>
@@ -10,11 +9,15 @@
       <a-assets>
         <img id="image" src="copy.jpg">
         <img id="sw" src="MF8K.jpg">
+        <a-asset-item id="castle1" src="castle.obj"></a-asset-item>
+        <a-asset-item id="castle2" src="castle.mtl"></a-asset-item>
       </a-assets>
 
       <a-box position="2 2 2" color="black" width="0.2" height="0.1">
 
       </a-box>
+
+      <a-obj-model src="#castle1" mtl="#castle2"></a-obj-model>
 
       <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9">
           <a-animation attribute="rotation" begin="mouseenter" end="click"
