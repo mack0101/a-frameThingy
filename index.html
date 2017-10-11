@@ -7,6 +7,8 @@
   </head>
   <body>
     <a-scene>
+      <a-entity light="type:point; castShadow:true;" position="1 1 1"></a-entity>
+
       <a-assets>
         <img id="image" src="copy.jpg">
         <img id="sw" src="MF8K.jpg">
@@ -19,7 +21,7 @@
 
       </a-box>
 
-      <a-obj-model src="#castle1" mtl="#castle2" scale="2 2 2" position="0 -25 0">
+      <a-obj-model src="#castle1" mtl="#castle2" scale="3 3 3" position="0 -25 0">
         <a-animation attribute="rotation" begin="mouseenter" end="click"
              dur="1000"
              to="0 360 0"
