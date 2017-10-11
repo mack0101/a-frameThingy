@@ -6,6 +6,9 @@
   </head>
   <body>
     <a-scene>
+      <a-assets>
+        <img id="image" src="copy.jpg">
+      </a-assets>
       <a-entity id="cameraRig">
         <a-camera></a-camera>
         <a-entity teleport-controls="cameraRig: #cameraRig" gearvr-controls></a-entity>
@@ -17,10 +20,10 @@
                repeat="indefinite">
           </a-animation>
       </a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E">
+      <a-sphere src="#image" position="0 1.25 -5" radius="1.25">
         <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
-             dur="1000"
-             to="360 0 0"
+             dur="2000"
+             to="0 360 0"
              repeat="indefinite">
         </a-animation>
       </a-sphere>
