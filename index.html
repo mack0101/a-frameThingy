@@ -1,30 +1,8 @@
 <html>
   <head>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <meta name="Description" content="Hide, seek and destroy in this multi-player virtual reality chase game. For smartphones and desktop VR, including Cardboard, GearVR, Oculus Rift and Vive.">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- iOS Webapp Configuration -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <link rel="apple-touch-icon" href="artwork/icon.png">
-
-        <!-- Facebook Open Graph Markup -->
-        <meta property="og:url"                content="http://www.marciot.com/mazewar-vr" />
-        <meta property="og:type"               content="article" />
-        <meta property="og:title"              content="Maze War VR" />
-        <meta property="og:description"        content="Hide, seek and destroy in this virtual reality remake of a 1974 chase game that originated at NASA." />
-        <meta property="og:image"              content="artwork/fb-share.jpg" />
-        <meta property="og:image:width"        content="1200" />
-        <meta property="og:image:height"       content="630" />
-        <!-- End of Facebook Open Graph Markup -->
-
-        <!-- During development, the code is changing often and it may be useful not to cache things -->
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-        <meta http-equiv="Pragma" content="no-cache"/>
-        <meta http-equiv="Expires" content="0"/>
 
 
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
@@ -42,8 +20,6 @@
         <img id="floor" src="floor.jpg">
         <a-asset-item id="castle1" src="object2.obj"></a-asset-item>
         <a-asset-item id="castle2" src="object2.mtl"></a-asset-item>
-        <a-asset-item id="smooth1" src="smooth.obj"></a-asset-item>
-        <a-asset-item id="smooth2" src="smooth.mtl"></a-asset-item>
       </a-assets>
 
       <a-box position="2 2 2" color="black" width="0.2" height="0.1">
@@ -51,14 +27,6 @@
       </a-box>
 
       <a-obj-model src="#castle1" mtl="#castle2" scale="1 1 1" position="0 -25 0">
-        <a-animation attribute="rotation" begin="mouseenter" end="click"
-             dur="1000"
-             to="0 360 0"
-             repeat="indefinite">
-        </a-animation>
-      </a-obj-model>
-
-      <a-obj-model src="#smooth1" mtl="#smooth2" scale="2 2 2" position="5 -10 5">
         <a-animation attribute="rotation" begin="mouseenter" end="click"
              dur="1000"
              to="0 360 0"
@@ -89,9 +57,9 @@
       </a-cylinder>
       <!-- <a-plane src="#floor" position="0 0 -4" rotation="-90 0 0" width="50" height="50"></a-plane> -->
       <a-sky src="#sw"></a-sky>
-      <a-camera position=" 15 -10 0">
+      <!-- <a-camera position=" 15 -10 0">
         <a-cursor color="black"></a-cursor>
-      </a-camera>
+      </a-camera> -->
     </a-scene>
   </body>
 </html>
