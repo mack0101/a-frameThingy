@@ -12,12 +12,9 @@
   </head>
   <body>
     <a-scene>
-      <a-entity id="cameraRig">
-        <a-camera>
-          <a-entity teleport-controls="cameraRig: #cameraRig" gearvr-controls></a-entity>
-          <a-cursor color="black"></a-cursor>
+        <a-camera position="0 -15 10">
+          <a-cursor color="black" teleport-controls="cameraRig" gearvr-controls></a-cursor>
         </a-camera>
-      </a-entity>
 
       <a-entity light="type:point; castShadow:true;" position="0 1 0"></a-entity>
 
@@ -41,21 +38,21 @@
         </a-animation>
       </a-obj-model>
 
-      <a-box position="-1 1.2 -3" rotation="0 45 0" color="#4CC3D9">
+      <a-box position="-1 -15 5" rotation="0 45 0" color="#4CC3D9">
           <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
                dur="1000"
                to="0 360 10"
                repeat="indefinite">
           </a-animation>
       </a-box>
-      <a-sphere src="#image" position="0 2 -5" radius="1.25">
+      <a-sphere src="#image" position="0 -15 -5" radius="2">
         <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
              dur="2000"
              to="0 360 0"
              repeat="indefinite">
         </a-animation>
       </a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D">
+      <a-cylinder position="5 -15 -3" radius="0.5" height="1.5" scale="2 2 2" color="#FFC65D">
         <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
              dur="1000"
              to="360 0 0"
